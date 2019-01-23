@@ -37,7 +37,7 @@ class UploadModule (environment: Environment, configuration: Configuration) exte
 
 
 trait UploadComponent{
-  var uploadConfig:UploadConfig
+  //var uploadConfig:UploadConfig
   def createDir
   def store
 }

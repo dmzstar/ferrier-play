@@ -48,7 +48,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
     val clients = new Clients(baseUrl+ "/callback", formClient,
       new AnonymousClient())
     val config = new Config(clients)
-    config.addAuthorizer("admin", new RequireAnyRoleAuthorizer[Nothing]("ROLE_ADMIN"))
+    //config.addAuthorizer("admin", new RequireAnyRoleAuthorizer[Nothing]("ROLE_ADMIN"))
     config.addMatcher("excludedPath", new PathMatcher().excludeRegex("^/login$"))
     config.setHttpActionAdapter(new DefaultHttpActionAdapter())
     config

@@ -1,0 +1,17 @@
+@()
+
+@import helper._
+
+@main("Welcome to PlayExample") {
+@helper.form(action = controllers.upload.routes.UploadController.formUpload, 'enctype -> "multipart/form-data") {
+
+<input type="file" name="picture">
+
+<p>
+  <input type="submit">
+</p>
+
+
+
+}
+}

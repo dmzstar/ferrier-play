@@ -6,6 +6,8 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
+->      /cms                        controllers.Router
+
 ->  /admin                          admin.Routes
 
 # Map static resources from the /public folder to the /assets URL path
@@ -22,3 +24,10 @@ GET     /login              controllers.LoginController.index
 GET     /hello              controllers.HomeController.hello
 
 GET     /hi              controllers.HiController.hi
+
+
+
+GET /test/upload controllers.upload.UploadController.index
+
++ nocsrf
+POST  /test/upload          controllers.upload.UploadController.formUpload

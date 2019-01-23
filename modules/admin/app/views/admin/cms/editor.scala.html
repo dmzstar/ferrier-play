@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
+</head>
+<body>
+        <textarea name="editor1"></textarea>
+        <script>
+            CKEDITOR.replace('editor1',{
+                customConfig : '@routes.Assets.versioned("javascripts/ckeditor/config.js")'
+            });
+        </script>
+</body>
+</html>
