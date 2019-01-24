@@ -9,7 +9,8 @@ import javax.inject.Singleton
 
 import scala.util.control.Exception._
 import play.api.Logger
-import play.api.Mode
+
+import play.api.{Configuration, Environment, Mode}
 
 class UploadModule (environment: Environment, configuration: Configuration) extends AbstractModule {
 
@@ -52,9 +53,9 @@ class UploadComponentImpl  extends  UploadComponent{
   }
 }
 
+import javax.inject.Inject
+
 @Singleton
-case class UploadConfig(){
-  var base:String = _
-  var baseUrl:String = _
-  var compress:Boolean = true
+class UploadContext @Inject() (val configuration: Configuration,val env:Environment){
+
 }

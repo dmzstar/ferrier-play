@@ -3,7 +3,7 @@ organization := "com.weifan"
 
 version := "1.0-SNAPSHOT"
 
-lazy val domain = (project in file("modules/domain")).enablePlugins(PlayScala, PlayEbean)
+lazy val domain = (project in file("modules/domain")).enablePlugins(PlayScala,PlayEbean)
 lazy val admin = (project in file("modules/admin")).enablePlugins(PlayScala, PlayEbean).dependsOn(domain).aggregate(domain)
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala, PlayEbean)
@@ -14,6 +14,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala, PlayEbean)
 scalaVersion := "2.12.8"
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint")
+
+scalaJSUseMainModuleInitializer := true
 
 /**
 initialize := {
